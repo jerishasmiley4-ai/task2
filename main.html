@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: #f0f0f0;
+            margin: 0;
+            background-image: url(https://png.pngtree.com/background/20230527/original/pngtree-aesthetic-hand-drawn-floral-background-vector-picture-image_2762396.jpg);
+        }
+        h1 { color: #333; }
+        .stopwatch {
+            padding: 20px;
+            text-align: center;
+        }
+        #laps {
+           list-style: none;
+           padding: 0;
+           margin-top: 15px;
+           max-height: 150px;
+           overflow-y: auto; 
+           width: 200px; 
+           text-align: left;
+        }
+
+        #laps li {
+           padding: 5px;
+           border-bottom: 1px solid #ccc;
+           font-size: 1rem;
+        }
+        #display {
+            font-size: 1.8em;
+            margin: 10px 0;
+            font-weight: bold;
+            color: #333;
+        }
+        .circle {
+            width: 200px; 
+            height: 200px;
+            border: 8px solid rgb(89, 89, 103);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            background: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        button:hover { opacity: 0.8; transform: scale(1.1);}
+        #start { background: #28a745; color: white; }
+        #pause { background: #ffc107; color: black; }
+        #reset { background: #dc3545; color: white; }
+        #lap { background: #007bff; color: white; }
+        ul { list-style-type: none; padding: 0; margin: 10px 0 0; }
+        li { padding: 5px; border-bottom: 1px solid #ccc; font-size: 1.1em; }
+    </style>
+</head>
+<body>
+    <div class="stopwatch">
+      <div class="circle">
+        <div id="display">00:00:00:00</div>
+      </div>
+        <button id="start">Start</button>
+        <button id="pause">Pause</button>
+        <button id="reset">Reset</button>
+        <button id="lap">Lap</button>
+        <ul id="laps"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
